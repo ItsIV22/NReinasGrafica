@@ -112,8 +112,11 @@ void resolverProblemaNReinas(int N) {
     // Crear un tablero de N x N inicializado con 0s
     vector<vector<int>> tablero(N, vector<int>(N, 0));
 
-    // Crear la carpeta "Soluciones" si no existe
-    system("mkdir -p Soluciones");
+    // Borrar la carpeta "Soluciones" si ya existe para evitar solapamiento de imágenes
+    system("rmdir /S /Q Soluciones");
+
+    // Crear la carpeta "Soluciones"
+    system("mkdir Soluciones");
 
     // Contador para el número de pasos (imágenes guardadas)
     int paso = 1;
